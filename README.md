@@ -5,7 +5,6 @@
 # ❗ℹ️ Important Info
 
 ### Content-Type for Headers
-
 - `text/html`
 - `application/json`
 - `image/jpeg`
@@ -34,6 +33,19 @@
 ### Response Control
 - `res.flushHeaders()` - Forces headers to be written immediately.
 - `res.hasHeader(name)` - Checks if a header exists.
+
+### HTTP Methods
+- `GET` - Retrieves data from the server.
+- `POST` - Sends data to the server to create a new resource.
+- `PUT` - Updates or replaces an existing resource on the server.
+- `HEAD` - Similar to `GET`, but only retrieves headers (no body).
+- `DELETE` - Removes a resource from the server.
+- `PATCH` - Partially updates an existing resource.
+- `OPTIONS` - Returns the supported HTTP methods for a resource.
+
+**Reference to Article:** [The 7 Methods](https://assertible.com/blog/7-http-methods-every-web-developer-should-know-and-how-to-test-them)
+
+<img width="558" alt="Image" src="https://github.com/user-attachments/assets/eeecca66-6921-45ed-83c6-fad17a1dfdce" />
 
 # 🛠️ 🐛 Progress/Bugs
 
