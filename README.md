@@ -2,6 +2,39 @@
 
 ### Repo made to learn **_NodeJS._** This will also include making restful APIs and dealing with requests and responses.
 
+# ❗ℹ️ Important Info
+
+### Content-Type for Headers
+
+- `text/html`
+- `application/json`
+- `image/jpeg`
+- `image/png`
+- `image/gif`
+- `audio/mpeg`
+- `video/mp4`
+- `application/javascript`
+- `text/css`
+- `text/plain`
+
+### Setting Headers
+- `res.setHeader(name, value)` - Sets a response header.
+- `res.getHeader(name)` - Retrieves a specific response header.
+- `res.removeHeader(name)` - Removes a response header.
+- `res.writeHead(statusCode, headers)` - Sets status code and multiple headers at once.
+
+### Sending Data
+- `res.write(chunk)` - Writes data to the response body.
+- `res.end([data])` - Signals the response is complete, optionally sending a final chunk of data.
+
+### Handling Status Codes
+- `res.statusCode = number` - Sets the HTTP status code.
+- `res.statusMessage = "message"` - Customizes the status message.
+
+### Response Control
+- `res.flushHeaders()` - Forces headers to be written immediately.
+- `res.hasHeader(name)` - Checks if a header exists.
+
 # 🛠️ 🐛 Progress/Bugs
 
 ### ⚙️ Creating a basic server and it's setup:
