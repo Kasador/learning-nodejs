@@ -103,21 +103,7 @@ const arrayList = [
 ]; // array list
 
 const server = http.createServer((req, res) => { // using the createServer method from http module
-    /* setHeader Types >>> 
-        text/html
-        application/json
-        image/jpeg
-        image/png
-        image/gif
-        audio/mpeg
-        video/mp4
-        application/javascript
-        text/css
-        text/plain
-    */
     res.setHeader('Content-Type', 'application/json'); // setting the response for the header
-
-    // res.write("<h1>h1 header</h1>"); // simple write response
 
     res.end( // ending/final response
         JSON.stringify( // This is to convert object to string, err: The "chunk" argument must be of type string or an instance of Buffer or Uint8Array.
