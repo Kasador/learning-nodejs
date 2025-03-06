@@ -1,5 +1,5 @@
-# 🗂 Overview to Learning **NodeJS**
-
+# 🗂 Overview to **NodeJS/Express**
+[![My Skills](https://skillicons.dev/icons?i=js,nodejs,express)](https://skillicons.dev)
 ### Repo made to learn **_NodeJS._** This will also include making restful APIs and dealing with requests and responses.
 
 # ❗ℹ️ Important Info
@@ -124,3 +124,52 @@ server.listen(PORT, () => { // listen to the port and then console log message
 ```
 
 <img width="523" alt="Image" src="https://github.com/user-attachments/assets/156b197a-a328-4773-975d-69220ed1a4d8" />
+
+# ⛁ Working w/ Routes in **_ExpressJS_**
+### [![My Skills](https://skillicons.dev/icons?i=express)](https://skillicons.dev)╰┈➤ 
+
+### ⚙️ Setup + Environment Variables
+
+- Download and install the following **npm** packages:
+
+```bash
+# This will install express and we need to make a .env file
+npm install express dotenv
+```
+
+- Now we alter our code to use **NodeJS** w/ _Express_.
+
+**_server.js_**
+
+```js
+const http = require('http'); // importing the http module from node:http
+require('dotenv').config(); // import environment variables from .env file
+const app = require('./app'); // import data from index.js
+
+const server = http.createServer(app); // throw data from express app to http server
+
+server.listen(process.env.PORT, () => { // listen to the port and then console log message
+    console.log(`Server running at http://localhost:${process.env.PORT}/`);
+});
+```
+
+**_app/index.js_**
+
+```js
+const express = require('express');
+// import { express } from 'express';
+
+const app = express();
+
+app.get('/', (req, res) => { // use '/' route 
+    res.status(200).json({ // get status 200 - success and return data into JSON
+        message: 'GET - root',
+        metadata: {
+            hostname: req.hostname, 
+            method: req.method
+        }
+    });
+});
+
+module.exports = app; // export app, used in server.js file 
+```
