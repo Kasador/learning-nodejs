@@ -6,7 +6,7 @@ app.use(express.json()); // middleware
 
 app.get('/', (req, res) => { // use '/' route 
     res.status(200).json({ // get status 200 - success and return data into JSON
-        message: 'GET to root',
+        message: 'Server is up and running. To use the api, please use /api/users',
         metadata: {
             hostname: req.hostname, 
             method: req.method
